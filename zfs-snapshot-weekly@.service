@@ -5,7 +5,7 @@ After=zfs.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/sbin/zfsnap snapshot -rvzp 'weekly-' -a 2m data
+ExecStart=/usr/local/sbin/zfsnap snapshot -rvzp 'weekly-' -a 2m %i
 ExecStart=/usr/local/sbin/zfsnap destroy -rv data
 
 # zfsnap1
